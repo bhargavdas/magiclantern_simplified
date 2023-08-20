@@ -38,6 +38,7 @@ static const camera_id_t camera_id[] = {
 	{ 0x80000270, {"Canon EOS 550D", "Canon EOS Rebel T2i", "Canon EOS Kiss X4"} },
 	{ 0x80000285, {"Canon EOS 5D Mark III", NULL, NULL} },
 	{ 0x80000286, {"Canon EOS 600D", "Canon EOS Rebel T3i", "Canon EOS Kiss X5"} },
+	{ 0x80000327, {"Canon EOS 1200D", "Canon EOS Rebel T5", "Canon EOS Kiss X70"} },
 	{ 0x80000287, {"Canon EOS 60D", NULL, NULL} },
 	{ 0x80000288, {"Canon EOS 1100D", "Canon EOS Rebel T3", "Canon EOS Kiss X50"} },
 	{ 0x80000289, {"Canon EOS 7D Mark II", NULL, NULL} },

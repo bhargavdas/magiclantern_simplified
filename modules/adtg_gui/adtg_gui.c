@@ -1080,6 +1080,11 @@ static unsigned int adtg_gui_init()
         ENGIO_WRITE_FUNC = 0xFF2B2460;  // from stubs
         ENG_DRV_OUT_FUNC = 0xFF2B2148;
     }
+    else if (is_camera("1200D", "1.0.2"))
+    {
+        ADTG_WRITE_FUNC = 0xFF3A246C; //"[REG] @@@@@@@@@@@@ Start ADTG[CS:%lx]"
+        CMOS_WRITE_FUNC = 0xFF3A265C; //"[REG] ############ Start CMOS"
+    }
     else return CBR_RET_ERROR;
 
     
