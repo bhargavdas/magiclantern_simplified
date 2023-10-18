@@ -1,22 +1,27 @@
 #Makefile.setup.platform for 1200D 1.0.2
 
+# Definitions for version 102
 ML_MODULES_SYM_NAME=t5_$(FW_VERSION).sym
-CANON_NAME_FIR=CCF15102.FIR
 
-ROMBASEADDR	= 0xFF0C0000
+ifeq ($(FW_VERSION),102)
+
+CANON_NAME_FIR=CCF12102.FIR
+ROMBASEADDR	= 0xFF010000
 PLATFORM_ARCH = armv5te
 
 ifeq ($(ML_SRC_PROFILE),generic)
 # DryOSmemory map
-# RESTARTSTART is selected to be at the beginning of
-# the AllocateMemory pool (512K reserved or autoexec.bin)
+# RESTARTSTART is selected to be just above the end of the bss
 #
-RESTARTSTART	= 0x00C80100
+RESTARTSTART    = 0x00C80100
+ML_BOOT_OBJ     = boot-d45-am.o
 else
 # DryOSmemory map
 # RESTARTSTART is selected to be at user_mem_start
 # (aka heap start / DRY_HEAP_START / malloc memory pool)
 RESTARTSTART	= 0x00082900
+endif
+
 endif
 
 FIRMWARE_ID = 0x80000327
